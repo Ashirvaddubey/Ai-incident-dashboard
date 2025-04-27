@@ -2,6 +2,12 @@
 
 A web application to monitor, report, and analyze AI safety incidents.
 
+## Deployment
+- Live: [https://ai-incident-dashboard.vercel.app](https://ai-incident-dashboard.vercel.app)
+
+## Changelog
+- **2024-06-09**: Fixed Vercel build error by wrapping Dashboard in Suspense for useSearchParams compatibility.
+
 ## Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or newer recommended)
 - [pnpm](https://pnpm.io/) (install with `npm install -g pnpm`)

@@ -4,16 +4,27 @@ A web application to monitor, report, and analyze AI safety incidents.
 
 ## Deployment
 - Live: [https://ai-incident-dashboard.vercel.app](https://ai-incident-dashboard.vercel.app)
+- Docker Hub: [ashirvaddubey/ai-safety-dashboard](https://hub.docker.com/r/ashirvaddubey/ai-safety-dashboard)
 
 ## Changelog
 - **2024-06-09**: Fixed Vercel build error by wrapping Dashboard in Suspense for useSearchParams compatibility.
+- **2024-06-09**: Added Docker support and published to Docker Hub.
 
 ## Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or newer recommended)
 - [pnpm](https://pnpm.io/) (install with `npm install -g pnpm`)
+- [Docker](https://www.docker.com/) (optional, for containerized deployment)
 
 ## Getting Started
 
+### Using Docker
+```bash
+# Pull and run the container
+docker pull ashirvaddubey/ai-safety-dashboard:latest
+docker run -p 3000:3000 ashirvaddubey/ai-safety-dashboard:latest
+```
+
+### Local Development
 1. **Clone the repository**
    ```sh
    git clone <your-repo-url>
@@ -68,6 +79,12 @@ Firebase is already configured in `lib/firebase.ts`. If you need to update the c
 - `pnpm dev` — Start development server
 - `pnpm build` — Build for production
 - `pnpm start` — Start production server
+
+## Docker Commands
+- `docker-compose up -d` — Start the containerized application
+- `docker-compose down` — Stop the containerized application
+- `docker-compose up -d --build` — Rebuild and start the application
+- `docker-compose logs -f` — View application logs
 
 ## License
 MIT 

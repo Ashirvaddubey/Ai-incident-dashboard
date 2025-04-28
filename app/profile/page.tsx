@@ -68,7 +68,7 @@ export default function ProfilePage() {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Calendar className="h-4 w-4" />
-                <span>Joined {new Date(user.metadata.creationTime).toLocaleDateString()}</span>
+                <span>Joined {user.metadata.creationTime ? new Date(user.metadata.creationTime).toLocaleDateString() : 'Unknown'}</span>
               </div>
               <div className="pt-4">
                 <Button variant="outline" className="w-full">

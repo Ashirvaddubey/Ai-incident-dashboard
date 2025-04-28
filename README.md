@@ -6,9 +6,26 @@ A web application to monitor, report, and analyze AI safety incidents.
 - Live: [https://ai-incident-dashboard.vercel.app](https://ai-incident-dashboard.vercel.app)
 - Docker Hub: [ashirvaddubey/ai-safety-dashboard](https://hub.docker.com/r/ashirvaddubey/ai-safety-dashboard)
 
+## CI/CD Pipeline
+This project uses Jenkins for continuous integration and deployment. The pipeline:
+1. Builds and tests the application
+2. Builds and pushes Docker images to Docker Hub
+3. Deploys to Vercel
+
+### Jenkins Setup
+1. Install Jenkins on your server
+2. Install required plugins:
+   - Docker Pipeline
+   - Credentials Binding
+   - Git
+3. Configure credentials in Jenkins:
+   - `docker-hub-credentials`: Docker Hub username and password
+   - `vercel-token`: Vercel deployment token
+
 ## Changelog
 - **2024-06-09**: Fixed Vercel build error by wrapping Dashboard in Suspense for useSearchParams compatibility.
 - **2024-06-09**: Added Docker support and published to Docker Hub.
+- **2024-06-09**: Added Jenkins CI/CD pipeline configuration.
 
 ## Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or newer recommended)

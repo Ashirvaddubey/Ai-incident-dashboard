@@ -11,6 +11,7 @@ This project uses Jenkins for continuous integration and deployment. The pipelin
 1. Builds and tests the application
 2. Builds and pushes Docker images to Docker Hub
 3. Deploys to Vercel
+4.hello
 
 ### Jenkins Setup
 1. Install Jenkins on your server

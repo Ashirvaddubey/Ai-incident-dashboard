@@ -10,7 +10,7 @@ A web application to monitor, report, and analyze AI safety incidents.
 This project uses Jenkins for continuous integration and deployment. The pipeline:
 1. Builds and tests the application
 2. Builds and pushes Docker images to Docker Hub
-3. Deploys to Vercel
+3. Deploys to Vercel 
 
 
 ### Jenkins Setup
